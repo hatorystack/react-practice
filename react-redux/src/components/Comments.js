@@ -9,6 +9,7 @@ const Comments = ({ fetchComments, loading, comments }) => {
   const commentsItems = loading ? (
     <div>is loading...</div>
   ) : (
+    comments &&
     comments.map((comment) => (
       <div key={comment.id}>
         <h3>{comment.name}</h3>
@@ -17,10 +18,10 @@ const Comments = ({ fetchComments, loading, comments }) => {
       </div>
     ))
   );
-  return <div class="comments">{commentsItems}</div>;
+  return <div>{commentsItems}</div>;
 };
 
-const mapStateToProps = (comments) => {
+const mapStateToProps = ({ comments }) => {
   return {
     comments: comments.items,
   };

@@ -6,7 +6,7 @@ import commentsReducer from './comments/reducer';
 const rootReducer = combineReducers({
   views: viewsReducer,
   subscribers: subscriberReducer,
-  commentsReducer: commentsReducer,
+  comments: commentsReducer,
 });
 
 export default rootReducer;

@@ -11,7 +11,7 @@ const initialState = {
   err: null,
 };
 
-const commentsReducer = (state, action) => {
+const commentsReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCH_COMMENTS_REQUEST:
       return {
